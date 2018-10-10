@@ -43,7 +43,8 @@ public class PermissionWidget extends UIWidget implements WidgetManagerDelegate.
         Microphone,
         CameraAndMicrophone,
         Location,
-        Notification
+        Notification,
+        ReadExternalStorage
     }
 
     public PermissionWidget(Context aContext) {
@@ -130,6 +131,10 @@ public class PermissionWidget extends UIWidget implements WidgetManagerDelegate.
                 break;
             case Notification:
                 messageId = R.string.permission_notification;
+                iconId = R.drawable.ic_icon_dialog_notification;
+                break;
+            case ReadExternalStorage:
+                messageId = R.string.permission_read_external_storage;
                 iconId = R.drawable.ic_icon_dialog_notification;
                 break;
             default:
